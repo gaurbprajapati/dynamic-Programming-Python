@@ -1,0 +1,39 @@
+
+
+def LCS(s1, s2, n, m):
+    dp = [[0]*(m+1) for i in range(n+1)]
+    for i in range(n+1):
+        for j in range(m+1):
+            if i == 0 or j == 0:
+                dp[i][j] = 0
+            elif (s1[i-1] == s2[j-1]):
+                dp[i][j] = 1+dp[i-1][j-1]
+            else:
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+    return dp[n][m]
+
+# Function to find length of shortest common supersequence of two strings.
+
+
+def shortestCommonSupersequence(X, Y, m, n):
+    def LCS(s1, s2, n, m):
+        dp = [[0]*(m+1) for i in range(n+1)]
+        for i in range(n+1):
+            for j in range(m+1):
+                if i == 0 or j == 0:
+                    dp[i][j] = 0
+                elif (s1[i-1] == s2[j-1]):
+                    dp[i][j] = 1+dp[i-1][j-1]
+                else:
+                    dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+        return dp[n][m]
+
+    return m+n-LCS(X, Y, m, n)
+
+
+X = "abcd"
+Y = "xycd"
+
+m = len(X)
+n = len(Y)
+print(shortestCommonSupersequence(X, Y, m, n))

@@ -27,8 +27,8 @@ class Solution:
         return self.printLis(nums, len(nums))
 
 
-# nums = [1, 2, 4, 3, 5, 4, 7, 2]
-nums = [1, 3, 5, 4, 7]
+nums = [1, 2, 4, 3, 5, 4, 7, 2]
+# nums = [1, 3, 5, 4, 7]
 # nums = [2, 2, 2, 2, 2]
 # nums = [3, 1, 2]
 

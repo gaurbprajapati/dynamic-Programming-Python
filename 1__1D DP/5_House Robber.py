@@ -11,7 +11,7 @@ class Solution:
 
         return max(self.solve(nums[1:]), self.solve(nums[:-1]))
 
-    def solve(self, a):
+    def spaceOptimization(self, a):
         prev2 = 0
         prev = a[0]
         for i in range(1, len(a)):
